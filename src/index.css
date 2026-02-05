@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Zalando Sans Expanded", sans-serif;
+    --font-mono: "DM Mono", monospace;
+    --font-sans: "Host Grotesk", sans-serif;
+}
+
+@layer utilities {
+    .animate-open-menu {
+        animation: open-menu 0.4s ease-in-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
