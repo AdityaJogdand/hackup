@@ -84,17 +84,17 @@ const FAQItem = ({ question, answer, index, isOpen, onClick }) => {
         <div className="border-b border-white/10 overflow-hidden">
             <button
                 onClick={onClick}
-                className="w-full py-8 flex items-center justify-between text-left group"
+                className="w-full py-5 sm:py-6 md:py-8 flex items-center justify-between text-left group gap-4"
             >
-                <div className="flex items-center gap-6">
-                    <span className="text-yellow-500/30 font-mono text-sm">
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-6 flex-1 min-w-0">
+                    <span className="text-yellow-500/30 font-mono text-xs sm:text-sm flex-shrink-0">
                         {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${isOpen ? 'text-yellow-500' : 'text-white group-hover:text-white/80'}`}>
+                    <h3 className={`text-base sm:text-lg md:text-xl lg:text-2xl font-bold transition-colors duration-300 ${isOpen ? 'text-yellow-500' : 'text-white group-hover:text-white/80'}`}>
                         {question}
                     </h3>
                 </div>
-                <div className={`relative w-6 h-6 flex items-center justify-center transition-transform duration-500 ${isOpen ? 'rotate-180' : ''}`}>
+                <div className={`relative w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500 ${isOpen ? 'rotate-180' : ''}`}>
                     <div className="absolute w-full h-[2px] bg-yellow-500" />
                     <div className={`absolute h-full w-[2px] bg-yellow-500 transition-transform duration-500 ${isOpen ? 'scale-y-0' : 'scale-y-100'}`} />
                 </div>
@@ -103,7 +103,7 @@ const FAQItem = ({ question, answer, index, isOpen, onClick }) => {
                 ref={answerRef}
                 className="h-0 opacity-0 overflow-hidden"
             >
-                <div className="pb-8 pl-14 pr-12 text-white/60 text-lg leading-relaxed max-w-4xl">
+                <div className="pb-6 sm:pb-8 pl-8 sm:pl-10 md:pl-14 pr-4 sm:pr-8 md:pr-12 text-white/60 text-sm sm:text-base md:text-lg leading-relaxed max-w-4xl">
                     {answer}
                 </div>
             </div>
@@ -149,14 +149,14 @@ const FAQ = () => {
         <section
             id="faq"
             ref={sectionRef}
-            className="relative w-full py-32 px-8 overflow-hidden bg-black/20"
+            className="relative w-full py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-black/20"
         >
             <div className="max-w-[1200px] mx-auto relative z-10">
 
                 {/* Header */}
-                <div ref={titleRef} className="mb-20">
-                    <p className="text-yellow-500 text-sm font-mono tracking-[0.5em] uppercase mb-6">Support</p>
-                    <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter">
+                <div ref={titleRef} className="mb-10 sm:mb-14 md:mb-20">
+                    <p className="text-yellow-500 text-xs sm:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 md:mb-6">Support</p>
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white tracking-tighter">
                         HELP <span className="text-yellow-500 italic font-light">CENTER</span>
                     </h2>
                 </div>

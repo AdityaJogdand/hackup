@@ -109,39 +109,39 @@ const Rules = () => {
         <section
             id="rules"
             ref={sectionRef}
-            className="relative w-full py-32 px-8 overflow-hidden bg-black/10"
+            className="relative w-full py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-black/10"
         >
             <div className="max-w-[1400px] mx-auto relative z-10">
 
                 {/* Header */}
-                <div ref={titleRef} className="mb-20 text-center md:text-left">
-                    <p className="text-yellow-500 text-sm font-mono tracking-[0.5em] uppercase mb-6">Guidelines</p>
-                    <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter uppercase whitespace-pre-line">
+                <div ref={titleRef} className="mb-10 sm:mb-14 md:mb-20 text-center md:text-left">
+                    <p className="text-yellow-500 text-xs sm:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 md:mb-6">Guidelines</p>
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white tracking-tighter uppercase whitespace-pre-line">
                         RULES &<br />
                         <span className="text-yellow-500 italic font-light">REGULATIONS</span>
                     </h2>
                 </div>
 
-                {/* Rules Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Rules Grid - 2 columns on tablet, 3 on desktop */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {rulesData.map((rule, index) => (
                         <div
                             key={index}
                             ref={el => rulesRef.current[index] = el}
-                            className="group p-8 rounded-[2rem] bg-zinc-900/40 border border-white/5 hover:border-yellow-500/30 transition-all duration-500 hover:bg-zinc-800/60"
+                            className="group p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] bg-zinc-900/40 border border-white/5 hover:border-yellow-500/30 transition-all duration-500 hover:bg-zinc-800/60"
                         >
-                            <div className="flex items-start justify-between mb-6">
-                                <span className="text-yellow-500 font-mono text-sm tracking-widest uppercase">
+                            <div className="flex items-start justify-between mb-3 sm:mb-4 md:mb-6">
+                                <span className="text-yellow-500 font-mono text-xs sm:text-sm tracking-widest uppercase">
                                     Code 0{index + 1}
                                 </span>
-                                <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-500 animate-pulse" />
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-500 transition-colors">
+                            <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 md:mb-4 group-hover:text-yellow-500 transition-colors">
                                 {rule.title}
                             </h3>
 
-                            <p className="text-white/50 leading-relaxed text-sm lg:text-base">
+                            <p className="text-white/50 leading-relaxed text-xs sm:text-sm lg:text-base">
                                 {rule.desc}
                             </p>
                         </div>

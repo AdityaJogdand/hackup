@@ -45,22 +45,22 @@ const Tracks = () => {
         <section
             id="tracks"
             ref={sectionRef}
-            className="relative w-full min-h-screen py-32 flex flex-col items-center justify-center overflow-hidden"
+            className="relative w-full min-h-screen py-16 sm:py-24 md:py-32 flex flex-col items-center justify-center overflow-hidden"
         >
-            <div className="max-w-[1400px] mx-auto px-8 relative z-10 text-center flex flex-col justify-center">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center flex flex-col justify-center">
 
                 {/* Header */}
-                <div ref={titleRef} className="mb-12">
-                    <p className="text-yellow-500 text-sm font-mono tracking-[0.5em] uppercase mb-6">Explore</p>
-                    <h2 className="text-6xl lg:text-8xl font-black text-white tracking-tighter">
+                <div ref={titleRef} className="mb-8 sm:mb-10 md:mb-12">
+                    <p className="text-yellow-500 text-xs sm:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 md:mb-6">Explore</p>
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white tracking-tighter">
                         INNOVATION <span className="text-yellow-500 italic font-light">TRACKS</span>
                     </h2>
                 </div>
 
                 {/* Coming Soon Area */}
-                <div ref={contentRef} className="relative py-20">
-                    <div className="absolute inset-0 bg-yellow-500/10 blur-[150px] rounded-full pointer-events-none" />
-                    <h3 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-white uppercase tracking-[0.1em] drop-shadow-[0_0_50px_rgba(255,255,255,0.2)] select-none">
+                <div ref={contentRef} className="relative py-10 sm:py-14 md:py-20">
+                    <div className="absolute inset-0 bg-yellow-500/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
+                    <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[10rem] font-black text-white uppercase tracking-[0.05em] sm:tracking-[0.1em] drop-shadow-[0_0_50px_rgba(255,255,255,0.2)] select-none">
                         COMING SOON
                     </h3>
                 </div>

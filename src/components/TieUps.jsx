@@ -14,7 +14,6 @@ const tieUpsData = [
     { img: clg2, name: "College 2" },
     { img: clg3, name: "College 3" },
     { img: clg4, name: "College 4" },
-
 ];
 
 const TieUps = () => {
@@ -24,20 +23,36 @@ const TieUps = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Note: Title animation removed to ensure visibility on all devices
-
-            // Infinite Carousel Animation
             const carousel = carouselRef.current;
+            if (!carousel) return;
 
-            // Animating xPercent to -25% moves exactly one set (1/4 of total)
-            // We use 4 duplicated sets to ensure there's always enough content filling the screen
-            // even on wide monitors before the loop resets
-            gsap.to(carousel, {
-                xPercent: -25,
-                duration: 20,
-                ease: "none",
-                repeat: -1,
-            });
+            // Check if mobile viewport
+            const isMobile = window.innerWidth < 768;
+            
+            // Faster speed on mobile (5s), slower on desktop (20s)
+            const duration = isMobile ? 5 : 20;
+
+            // Calculate the width of one complete set (4 original logos)
+            const firstChild = carousel.children[0];
+            const itemWidth = firstChild.offsetWidth;
+            const gap = isMobile ? 32 : 48; // matches gap-8 (32px) and md:gap-12 (48px)
+            const oneSetWidth = (itemWidth + gap) * tieUpsData.length;
+            
+            // Animate by pixels for seamless looping
+            gsap.fromTo(carousel, 
+                {
+                    x: 0
+                },
+                {
+                    x: -oneSetWidth,
+                    duration: duration,
+                    ease: "linear",
+                    repeat: -1,
+                    modifiers: {
+                        x: gsap.utils.unitize(x => parseFloat(x) % oneSetWidth)
+                    }
+                }
+            );
         }, sectionRef);
 
         return () => ctx.revert();
@@ -83,7 +98,8 @@ const TieUps = () => {
                     {/* Scrolling Logos */}
                     <div
                         ref={carouselRef}
-                        className="flex gap-8 md:gap-12 items-center"
+                        className="flex gap-8 md:gap-12 items-center will-change-transform"
+                        style={{ width: 'max-content' }}
                     >
                         {duplicatedLogos.map((item, index) => (
                             <div

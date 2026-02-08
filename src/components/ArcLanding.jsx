@@ -354,9 +354,9 @@ const ArcLanding = () => {
 
                         <div className="absolute bottom-0 w-full flex items-center justify-between px-12 py-6 bg-white/80 backdrop-blur">
                             <div className="flex gap-8 text-xs font-bold uppercase tracking-widest text-neutral-400">
-                                <a href="#" className="hover:text-black transition-colors">Instagram</a>
-                                <a href="#" className="hover:text-black transition-colors">Twitter</a>
-                                <a href="#" className="hover:text-black transition-colors">Discord</a>
+                                <a href="https://www.linkedin.com/showcase/hackthecore/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">LinkedIn</a>
+                                <a href="https://www.instagram.com/hackthecore.in?igsh=MTNuMHJicXB5bDQ3YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Instagram</a>
+                                <a href="https://x.com/hackthecorein?s=21" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">X</a>
                             </div>
 
                             <div className="text-xs font-mono text-neutral-300">

@@ -296,36 +296,36 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
       </div>
 
-      {/* Fixed HackUp Logo on Top Left - Laptop Only */}
-      <div className="hidden lg:block fixed top-5 left-6 z-[1000] pointer-events-none transition-all duration-500">
+      {/* Fixed HackUp Logo on Top Left - PC/Laptop only */}
+      <div className="hidden lg:block fixed top-5 left-4 md:left-5 lg:left-6 z-[1000] pointer-events-none transition-all duration-500">
         <img
           src={hackupLogo}
           alt="HackUp"
-          className="h-16 md:h-24 w-auto object-contain"
+          className="h-12 md:h-16 lg:h-24 w-auto object-contain"
         />
       </div>
 
-      {/* Fixed UniteCore Logo on Top Right - Laptop Only */}
-      <div className="hidden lg:block fixed top-10 right-12 z-[1000] pointer-events-none transition-all duration-500">
-        <div className="flex items-center gap-4">
-          <div className="w-[1px] h-8 bg-white/10 hidden md:block" />
+      {/* Fixed UniteCore Logo on Top Right - PC/Laptop only */}
+      <div className="hidden lg:block fixed top-8 md:top-9 lg:top-10 right-6 md:right-8 lg:right-12 z-[1000] pointer-events-none transition-all duration-500">
+        <div className="flex items-center gap-3 md:gap-4">
+          <div className="w-[1px] h-6 md:h-8 bg-white/10 hidden md:block" />
           <img
             src={uniteLogo}
             alt="UniteCore"
-            className="h-10 md:h-14 w-auto object-contain opacity-80"
+            className="h-14 md:h-16 lg:h-20 w-auto object-contain opacity-100"
           />
         </div>
       </div>
 
       {/* Global Mascot for Schedule - Fixed Position (Left Side) */}
-      <div ref={mascotScheduleRef} className="fixed bottom-0 left-4 lg:left-10 z-50 pointer-events-none hidden lg:block w-48 lg:w-56 opacity-0 translate-y-20">
+      <div ref={mascotScheduleRef} className="fixed bottom-0 left-2 md:left-6 lg:left-10 z-50 pointer-events-none hidden md:block w-32 md:w-40 lg:w-48 xl:w-56 opacity-0 translate-y-20">
         <img
           src={mascotScheduleImg}
           alt="Mascot Schedule"
           className="w-full h-auto object-bottom drop-shadow-[0_10px_40px_rgba(234,179,8,0.25)] relative z-10"
         // No horizontal flip for left side usually, unless image needs it. Assuming character2 faces right or front.
         />
-        <div ref={bubbleScheduleRef} className="absolute -top-60 left-[50%] -translate-x-1/2 md:left-[50%] md:translate-x-0 w-80 lg:w-96 opacity-0 scale-75 origin-bottom-left z-20">
+        <div ref={bubbleScheduleRef} className="absolute -top-40 md:-top-52 lg:-top-60 left-[50%] -translate-x-1/2 md:left-[50%] md:translate-x-0 w-52 md:w-72 lg:w-80 xl:w-96 opacity-0 scale-75 origin-bottom-left z-20">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={bubbleImg}
@@ -333,8 +333,8 @@ function App() {
               className="w-full h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
             // Normal orientation for left side bubble
             />
-            <div className="absolute inset-0 flex items-center justify-center pl-10 pr-14 pb-12 pt-4">
-              <p className="text-black text-base lg:text-lg font-black leading-tight italic tracking-tight text-center">
+            <div className="absolute inset-0 flex items-center justify-center pl-6 md:pl-8 lg:pl-10 pr-8 md:pr-12 lg:pr-14 pb-8 md:pb-10 lg:pb-12 pt-2 md:pt-3 lg:pt-4">
+              <p className="text-black text-xs md:text-sm lg:text-base xl:text-lg font-black leading-tight italic tracking-tight text-center">
                 "Step by step,<br />habibi — Dubai<br />wasn't built in a day."
               </p>
             </div>
@@ -359,7 +359,7 @@ function App() {
           <div className="flex flex-col gap-4 text-center md:text-left">
             <div className="text-xl font-black text-white font-['Zalando_Sans_Expanded']">HACKUP</div>
             <div className="flex flex-col gap-1 text-[10px] md:text-xs font-bold text-white/50 uppercase tracking-widest">
-              <p>Shravan Kadam : <span className="text-yellow-500">8308078534</span></p>
+              <p>Shravan Kadam : <span className="text-yellow-500">+91 8308078534</span></p>
               <p>Bhavesh Rajdev : <span className="text-yellow-500">+91 88779 90898</span></p>
               <p>Mail : <a href="mailto:Connect@hackthecore.in" className="text-yellow-500 hover:text-white transition-colors">Connect@hackthecore.in</a></p>
             </div>
@@ -368,22 +368,22 @@ function App() {
           <div className="text-[10px] font-bold text-white/30 uppercase tracking-[0.5em]">© 2026 HackTheCore. All rights reserved.</div>
 
           <div className="flex gap-6 items-center">
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/showcase/hackthecore/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="LinkedIn">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
             {/* Instagram */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Instagram">
+            <a href="https://www.instagram.com/hackthecore.in?igsh=MTNuMHJicXB5bDQ3YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Instagram">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
             {/* X (Twitter) */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="X">
+            <a href="https://x.com/hackthecorein?s=21" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="X">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-            {/* Discord */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Discord">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
               </svg>
             </a>
           </div>
@@ -391,14 +391,14 @@ function App() {
       </div>
 
       {/* Global Mascot - Fixed Position, Visible only during About Section */}
-      <div ref={mascotRef} className="fixed bottom-0 right-4 lg:right-10 z-50 pointer-events-none hidden lg:block w-48 lg:w-56 opacity-0 translate-y-20">
+      <div ref={mascotRef} className="fixed bottom-0 right-2 md:right-6 lg:right-10 z-50 pointer-events-none hidden md:block w-32 md:w-40 lg:w-48 xl:w-56 opacity-0 translate-y-20">
         <img
           src={mascotImg}
           alt="Mascot"
           className="w-full h-auto object-bottom drop-shadow-[0_10px_40px_rgba(234,179,8,0.25)] relative z-10"
           style={{ transform: 'scaleX(-1)' }}
         />
-        <div ref={bubbleRef} className="absolute -top-60 right-[120%] translate-x-1/2 w-80 lg:w-96 opacity-0 scale-75 origin-bottom-right z-20">
+        <div ref={bubbleRef} className="absolute -top-40 md:-top-52 lg:-top-60 right-[120%] translate-x-1/2 w-52 md:w-72 lg:w-80 xl:w-96 opacity-0 scale-75 origin-bottom-right z-20">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={bubbleImg}
@@ -406,8 +406,8 @@ function App() {
               className="w-full h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
               style={{ transform: 'scaleX(-1)' }}
             />
-            <div className="absolute inset-0 flex items-center justify-center pl-14 pr-10 pb-12 pt-4">
-              <p className="text-black text-base lg:text-lg font-black leading-tight italic tracking-tight text-center">
+            <div className="absolute inset-0 flex items-center justify-center pl-8 md:pl-12 lg:pl-14 pr-6 md:pr-8 lg:pr-10 pb-8 md:pb-10 lg:pb-12 pt-2 md:pt-3 lg:pt-4">
+              <p className="text-black text-xs md:text-sm lg:text-base xl:text-lg font-black leading-tight italic tracking-tight text-center">
                 "Welcome to HackUp,<br />habibi — build like<br />it's global."
               </p>
             </div>
@@ -416,14 +416,14 @@ function App() {
       </div>
 
       {/* Global Mascot for Prizes - Fixed Position (Right Side) */}
-      <div ref={mascotPrizesRef} className="fixed bottom-0 right-4 lg:right-10 z-[60] pointer-events-none hidden lg:block w-48 lg:w-56 opacity-0 translate-y-20">
+      <div ref={mascotPrizesRef} className="fixed bottom-0 right-2 md:right-6 lg:right-10 z-[60] pointer-events-none hidden md:block w-32 md:w-40 lg:w-48 xl:w-56 opacity-0 translate-y-20">
         <img
           src={mascotPrizesImg}
           alt="Mascot Prizes"
           className="w-full h-auto object-bottom drop-shadow-[0_10px_40px_rgba(234,179,8,0.25)] relative z-10"
           style={{ transform: 'scaleX(-1)' }} // Assuming facing left like About mascot
         />
-        <div ref={bubblePrizesRef} className="absolute -top-60 right-[120%] translate-x-1/2 w-80 lg:w-96 opacity-0 scale-75 origin-bottom-right z-20">
+        <div ref={bubblePrizesRef} className="absolute -top-40 md:-top-52 lg:-top-60 right-[120%] translate-x-1/2 w-52 md:w-72 lg:w-80 xl:w-96 opacity-0 scale-75 origin-bottom-right z-20">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={bubbleImg}
@@ -431,8 +431,8 @@ function App() {
               className="w-full h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
               style={{ transform: 'scaleX(-1)' }}
             />
-            <div className="absolute inset-0 flex items-center justify-center pl-14 pr-10 pb-12 pt-4">
-              <p className="text-black text-base lg:text-lg font-black leading-tight italic tracking-tight text-center">
+            <div className="absolute inset-0 flex items-center justify-center pl-8 md:pl-12 lg:pl-14 pr-6 md:pr-8 lg:pr-10 pb-8 md:pb-10 lg:pb-12 pt-2 md:pt-3 lg:pt-4">
+              <p className="text-black text-xs md:text-sm lg:text-base xl:text-lg font-black leading-tight italic tracking-tight text-center">
                 "Build hard, habibi —<br />GITEX Dubai<br />awaits you."
               </p>
             </div>
@@ -441,21 +441,21 @@ function App() {
       </div>
 
       {/* Global Mascot for Tracks - Fixed Position (Left Side) */}
-      <div ref={mascotTracksRef} className="fixed bottom-0 left-4 lg:left-10 z-50 pointer-events-none hidden lg:block w-48 lg:w-56 opacity-0 translate-y-20">
+      <div ref={mascotTracksRef} className="fixed bottom-0 left-2 md:left-6 lg:left-10 z-50 pointer-events-none hidden md:block w-32 md:w-40 lg:w-48 xl:w-56 opacity-0 translate-y-20">
         <img
           src={mascotTracksImg}
           alt="Mascot Tracks"
           className="w-full h-auto object-bottom drop-shadow-[0_10px_40px_rgba(234,179,8,0.25)] relative z-10"
         />
-        <div ref={bubbleTracksRef} className="absolute -top-60 left-[50%] -translate-x-1/2 md:left-[50%] md:translate-x-0 w-80 lg:w-96 opacity-0 scale-75 origin-bottom-left z-20">
+        <div ref={bubbleTracksRef} className="absolute -top-40 md:-top-52 lg:-top-60 left-[50%] -translate-x-1/2 md:left-[50%] md:translate-x-0 w-52 md:w-72 lg:w-80 xl:w-96 opacity-0 scale-75 origin-bottom-left z-20">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={bubbleImg}
               alt="Bubble"
               className="w-full h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
             />
-            <div className="absolute inset-0 flex items-center justify-center pl-10 pr-14 pb-12 pt-4">
-              <p className="text-black text-base lg:text-lg font-black leading-tight italic tracking-tight text-center">
+            <div className="absolute inset-0 flex items-center justify-center pl-6 md:pl-8 lg:pl-10 pr-8 md:pr-12 lg:pr-14 pb-8 md:pb-10 lg:pb-12 pt-2 md:pt-3 lg:pt-4">
+              <p className="text-black text-xs md:text-sm lg:text-base xl:text-lg font-black leading-tight italic tracking-tight text-center">
                 "Coming soon,<br />habibi — big things<br />on the way."
               </p>
             </div>
@@ -463,14 +463,14 @@ function App() {
         </div>
       </div>
       {/* Global Mascot for TieUps - Fixed Position (Right Side) */}
-      <div ref={mascotTieUpsRef} className="fixed bottom-0 right-4 lg:right-10 z-50 pointer-events-none hidden lg:block w-48 lg:w-56 opacity-0 translate-y-20">
+      <div ref={mascotTieUpsRef} className="fixed bottom-0 right-2 md:right-6 lg:right-10 z-50 pointer-events-none hidden md:block w-32 md:w-40 lg:w-48 xl:w-56 opacity-0 translate-y-20">
         <img
           src={mascotTieUpsImg}
           alt="Mascot TieUps"
           className="w-full h-auto object-bottom drop-shadow-[0_10px_40px_rgba(234,179,8,0.25)] relative z-10"
           style={{ transform: 'scaleX(-1)' }}
         />
-        <div ref={bubbleTieUpsRef} className="absolute -top-60 right-[120%] translate-x-1/2 w-80 lg:w-96 opacity-0 scale-75 origin-bottom-right z-20">
+        <div ref={bubbleTieUpsRef} className="absolute -top-40 md:-top-52 lg:-top-60 right-[120%] translate-x-1/2 w-52 md:w-72 lg:w-80 xl:w-96 opacity-0 scale-75 origin-bottom-right z-20">
           <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={bubbleImg}
@@ -478,8 +478,8 @@ function App() {
               className="w-full h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
               style={{ transform: 'scaleX(-1)' }}
             />
-            <div className="absolute inset-0 flex items-center justify-center pl-14 pr-10 pb-12 pt-4">
-              <p className="text-black text-base lg:text-lg font-black leading-tight italic tracking-tight text-center">
+            <div className="absolute inset-0 flex items-center justify-center pl-8 md:pl-12 lg:pl-14 pr-6 md:pr-8 lg:pr-10 pb-8 md:pb-10 lg:pb-12 pt-2 md:pt-3 lg:pt-4">
+              <p className="text-black text-xs md:text-sm lg:text-base xl:text-lg font-black leading-tight italic tracking-tight text-center">
                 "Powered by<br />leading campuses<br />and committees"
               </p>
             </div>

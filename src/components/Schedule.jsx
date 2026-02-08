@@ -107,19 +107,19 @@ const Schedule = () => {
         <section
             id="schedule"
             ref={sectionRef}
-            className="relative w-full min-h-screen py-16 md:py-32 overflow-hidden"
+            className="relative w-full min-h-screen py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden"
         >
             {/* Background Accent */}
-            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-yellow-500/5 blur-[100px] md:blur-[200px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] bg-yellow-500/5 blur-[80px] sm:blur-[100px] md:blur-[150px] lg:blur-[200px] rounded-full pointer-events-none" />
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 relative">
+            <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative">
 
                 {/* Header */}
-                <div ref={titleRef} className="text-center mb-16 md:mb-32">
-                    <p className="text-yellow-500 text-xs sm:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-4 md:mb-6">
+                <div ref={titleRef} className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-32">
+                    <p className="text-yellow-500 text-[9px] sm:text-xs md:text-sm font-mono tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] uppercase mb-3 sm:mb-4 md:mb-6">
                         Roadmap
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight px-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl:text-7xl font-bold text-white tracking-tight px-2 sm:px-4">
                         Journey to <span className="italic font-light text-yellow-500">Innovation</span>
                     </h2>
                 </div>
@@ -149,25 +149,25 @@ const Schedule = () => {
                         if (isCenter) {
                             // Centered Layout for Grand Finale
                             return (
-                                <div key={index} className="flex flex-col items-center justify-center mt-12 md:mt-20 relative z-10 w-full">
+                                <div key={index} className="flex flex-col items-center justify-center mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative z-10 w-full">
                                     <div
                                         ref={(el) => (cardsRef.current[index] = el)}
-                                        className="flex flex-col items-center text-center max-w-2xl px-4"
+                                        className="flex flex-col items-center text-center max-w-2xl px-3 sm:px-4 md:px-6"
                                     >
                                         {/* Center dot - desktop only */}
-                                        <div className="hidden md:block w-4 h-4 rounded-full bg-yellow-500 shadow-[0_0_20px_rgba(234,179,8,1)] mb-8" />
+                                        <div className="hidden md:block w-3 sm:w-4 h-3 sm:h-4 rounded-full bg-yellow-500 shadow-[0_0_20px_rgba(234,179,8,1)] mb-4 sm:mb-6 md:mb-8" />
 
-                                        <img src={hackupLogo} alt="HACKUP" className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 md:mb-6 drop-shadow-[0_0_15px_rgba(234,179,8,0.5)]" />
+                                        <img src={hackupLogo} alt="HACKUP" className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32 w-auto mb-3 sm:mb-4 md:mb-6 drop-shadow-[0_0_15px_rgba(234,179,8,0.5)]" />
 
-                                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 text-white">
                                             {item.title}
                                         </h3>
 
-                                        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-yellow-500 uppercase tracking-wider md:tracking-widest mb-4 md:mb-6 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+                                        <div className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-black text-yellow-500 uppercase tracking-wider md:tracking-widest mb-3 sm:mb-4 md:mb-6 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]">
                                             {item.time}
                                         </div>
 
-                                        <p className="text-base sm:text-lg md:text-xl text-white/70 leading-relaxed">
+                                        <p className="text-sm sm:text-base md:text-lg text-white/70 leading-relaxed">
                                             {item.desc}
                                         </p>
                                     </div>
