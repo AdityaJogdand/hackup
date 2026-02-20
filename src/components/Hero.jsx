@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import logoImg from '../assets/hackuplogo.png';
 import mascotImg from '../assets/character.png';
 import bubbleImg from '../assets/bubble.png';
@@ -25,9 +26,9 @@ const Hero = () => {
         seconds: 0
     });
 
-    // Calculate time until Feb 9th, 2026
+    // Calculate time until Feb 15th, 2026
     useEffect(() => {
-        const targetDate = new Date('2026-02-09T00:00:00+05:30').getTime();
+        const targetDate = new Date('2026-02-15T00:00:00+05:30').getTime();
 
         const updateCountdown = () => {
             const now = new Date().getTime();
@@ -179,8 +180,8 @@ const Hero = () => {
                 </div>
 
                 {/* HACKTHECORE Text - Fades Out */}
-                <h1 ref={textRef} className="font-['Zalando_Sans_Expanded'] text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight leading-tight text-white drop-shadow-2xl absolute">
-                    <div className="overflow-hidden flex flex-wrap justify-center max-w-[90vw]">
+                <h1 ref={textRef} className="font-['Zalando_Sans_Expanded'] text-[clamp(1.5rem,8vw,12rem)] font-black tracking-tighter leading-none text-white drop-shadow-2xl absolute z-0 pointer-events-none">
+                    <div className="overflow-hidden flex flex-wrap justify-center max-w-[95vw]">
                         {splitText("HACKTHECORE")}
                     </div>
                 </h1>
@@ -242,13 +243,15 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div ref={ctaRef} className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 opacity-0 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6">
-                    <button className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-yellow-500 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] w-full sm:w-auto">
-                        <span className="relative z-10 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-black">
-                            Register Now
-                        </span>
-                    </button>
+                    <Link to="/register">
+                        <button className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-yellow-500 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] w-full sm:w-auto">
+                            <span className="relative z-10 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-black">
+                                Register Now
+                            </span>
+                        </button>
+                    </Link>
                     <a
-                        href="https://drive.google.com/file/d/13yXTjirDAHi2PiIkZqsp1gWr38qTS25Z/view"
+                        href="https://drive.google.com/file/d/1q8CcY64iA8bWW3OVoxyiwdK2nsSQtTTr/view"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 border border-white/20 rounded-full overflow-hidden transition-all duration-300 hover:bg-white/5 hover:border-white/40 hover:scale-105 w-full sm:w-auto"
@@ -262,7 +265,7 @@ const Hero = () => {
 
 
             {/* Mascot and Dialog Bubble - Bubble positioned to the right */}
-            <div ref={mascotRef} className="absolute bottom-0 left-0 z-20 opacity-0 translate-y-10 pointer-events-none w-28 sm:w-36 md:w-48 lg:w-40 xl:w-48">
+            <div ref={mascotRef} className="absolute bottom-0 left-0 z-20 opacity-0 translate-y-10 pointer-events-none w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48">
                 <img
                     src={mascotImg}
                     alt="Mascot"

@@ -60,7 +60,7 @@ const Tracks = () => {
                 {/* Coming Soon Area */}
                 <div ref={contentRef} className="relative py-10 sm:py-14 md:py-20">
                     <div className="absolute inset-0 bg-yellow-500/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
-                    <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[10rem] font-black text-white uppercase tracking-[0.05em] sm:tracking-[0.1em] drop-shadow-[0_0_50px_rgba(255,255,255,0.2)] select-none">
+                    <h3 className="text-[clamp(1.5rem,10vw,10rem)] font-black text-white uppercase tracking-[0.05em] sm:tracking-[0.1em] drop-shadow-[0_0_50px_rgba(255,255,255,0.2)] select-none">
                         COMING SOON
                     </h3>
                 </div>

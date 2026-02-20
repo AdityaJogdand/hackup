@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scheduleData = [
     {
-        time: "9th February 2026",
+        time: "15th February 2026",
         title: "Registrations Starts",
         desc: "The portal opens! Register your team and start brainstorming ideas.",
     },
@@ -190,7 +190,7 @@ const Schedule = () => {
                                     <div className={`flex flex-col items-start text-left md:${isRightSide ? "items-start text-left" : "items-end text-right"
                                         }`}>
                                         {/* Time Badge */}
-                                        <span className="inline-block text-xs sm:text-sm font-mono uppercase tracking-[0.2em] sm:tracking-[0.3em] text-yellow-500 mb-3 md:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 border border-yellow-500/30 rounded-full">
+                                        <span className="inline-block text-xs sm:text-sm font-bold font-mono uppercase tracking-[0.2em] sm:tracking-[0.3em] text-yellow-500 mb-3 md:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 border border-yellow-500/30 rounded-full">
                                             {item.time}
                                         </span>
 

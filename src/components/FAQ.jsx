@@ -11,7 +11,7 @@ const faqData = [
     },
     {
         question: "When do registrations for HackUp start?",
-        answer: "Registrations for HackUp 2026 will open on 9th February. Students can register for Round 1 (Online Ideation & Screening) through the official Hack The Core website."
+        answer: "Registrations for HackUp 2026 will open on 15th February. Students can register for Round 1 (Online Ideation & Screening) through the official Hack The Core website."
     },
     {
         question: "Who can submit problem statements for HackUp?",
@@ -156,7 +156,7 @@ const FAQ = () => {
                 {/* Header */}
                 <div ref={titleRef} className="mb-10 sm:mb-14 md:mb-20">
                     <p className="text-yellow-500 text-xs sm:text-sm font-mono tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 md:mb-6">Support</p>
-                    <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white tracking-tighter">
+                    <h2 className="text-[clamp(1.75rem,8vw,6rem)] font-black text-white tracking-tighter leading-none">
                         HELP <span className="text-yellow-500 italic font-light">CENTER</span>
                     </h2>
                 </div>
